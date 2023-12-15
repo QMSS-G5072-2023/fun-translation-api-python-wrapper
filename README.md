@@ -4,7 +4,7 @@
 A Python wrapper around the Fun Translation API.
 A Python wrapper around the [Fun Translations API](https://funtranslations.com/api/). This is a public API, with a ratelimiting up to 60 API calls a day with distribution of 5 calls an hour.
 
-Use this to translate english into fun languages! 
+Use this package to translate english into fun languages! 
 What's more: 
 - Encrypt your text, like this 'ow-Herb róvan tur- ha n-? ' or this '4m3e 0W PUdum p!K 83?'
 - Get multiple translates from different fun languages
