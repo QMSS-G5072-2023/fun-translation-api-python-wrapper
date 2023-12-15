@@ -14,6 +14,22 @@ What's more:
 
 #### Package: [pypi](https://pypi.org/project/python_funtranslation/)
 
+
+## Installation
+
+```bash
+$ pip install python_funtranslation
+```
+
+## Usage
+
+Explore the functions of this package with examples [here](https://python-funtranslation.readthedocs.io/en/latest/autoapi/python_funtranslation/python_funtranslation/index.html#python_funtranslation.python_funtranslation.get_full_description).
+
+If you want to know the featured functions, please refer to [quick_guide.ipynb](https://github.com/QMSS-G5072-2023/fun-translation-api-python-wrapper/blob/master/quick_guide.ipynb).
+
+For a guide on all functions, please refer to [complete_guide.ipynb](https://github.com/QMSS-G5072-2023/fun-translation-api-python-wrapper/blob/master/complete_guide.ipynb).
+
+
 ## Languages
 
 
@@ -42,16 +58,6 @@ What's more:
 | wordgame      | ferb-latin  | During their routine summer fun, the two brothers Phineas and Ferb (in a Disney series) create their own language, Ferb Latin which quickly catches on.                                      |
 
 
-
-## Installation
-
-```bash
-$ pip install python_funtranslation
-```
-
-## Usage
-
-Explore the functions of this package with examples [here](https://python-funtranslation.readthedocs.io/en/latest/autoapi/python_funtranslation/python_funtranslation/index.html#python_funtranslation.python_funtranslation.get_full_description).
 
 ## Contributing
 
