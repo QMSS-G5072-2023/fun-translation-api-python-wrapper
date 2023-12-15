@@ -1,0 +1,22 @@
+:py:mod:`python_funtranslation`
+===============================
+
+.. py:module:: python_funtranslation
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   python_funtranslation/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+
+   
+

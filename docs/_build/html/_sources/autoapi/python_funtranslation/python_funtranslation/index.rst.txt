@@ -1,0 +1,180 @@
+:py:mod:`python_funtranslation.python_funtranslation`
+=====================================================
+
+.. py:module:: python_funtranslation.python_funtranslation
+
+
+Module Contents
+---------------
+
+
+Functions
+~~~~~~~~~
+
+.. autoapisummary::
+
+   python_funtranslation.python_funtranslation.get_full_description
+   python_funtranslation.python_funtranslation.get_languages
+   python_funtranslation.python_funtranslation.get_translation_json
+   python_funtranslation.python_funtranslation.get_hard2read
+   python_funtranslation.python_funtranslation.get_translation
+   python_funtranslation.python_funtranslation.sentence_similarity
+   python_funtranslation.python_funtranslation.similarity_matrix
+   python_funtranslation.python_funtranslation.compare_fun_languages
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   python_funtranslation.python_funtranslation.languages
+   python_funtranslation.python_funtranslation.languages_list
+
+
+.. py:data:: languages
+
+   
+
+.. py:data:: languages_list
+
+   
+
+.. py:function:: get_full_description(language='leetspeak')
+
+   Get the full description of one fun language by web scraping.
+
+   :param language: Set as 'leetspeak' by default.
+   :type language: string
+
+   :returns: * *Returns a string of the language's full description*
+             * *Returns "no description" if the input language is not a part of the Fun Translation API website.*
+
+   .. rubric:: Example
+
+   >>> get_full_description()
+   'Convert from English to Leet Speak. Leetspeak an informal language or code used on the Internet, in which standard letters are often replaced by numerals or special characters. It is also sometimes referred as H4X0R which is "Hacker" in leetspeak. Leet (or "1337"), also known as eleet or leetspeak, can be thought of as an alternative alphabet for the English language. It is used primarily on the Internet. It uses various combinations of ASCII characters to replace Latinate letters. For example, leet spellings of the word leet include 1337 and l33t; eleet may be spelled 31337 or 3l33t.'
+
+   >>> get_full_description(language = 'post-modern')
+   'Convert from plain English to Postmordern Speak. If you have the need to sound semiotic-ally and subliminally cool in party conversations we can help you! Our post-modern translator will make you the sophisticated conversationalist.'
+
+
+.. py:function:: get_languages()
+
+   Get short descriptions of all fun languages and their category.
+
+
+
+.. py:function:: get_translation_json(in_text='Hello World!', target_language='random')
+
+   Translate input text into one fun target language and returns the json format of API client request.
+
+   :param in_text: Set as 'Hello World!' by default.
+                   Strongly recommended in_text language: English
+   :type in_text: string
+   :param target_language: Set as "random" by default.
+                           Use the function get_languages() for more information on available target languages.
+   :type target_language: string
+
+   :rtype: Returns the json format of API client request
+
+   .. rubric:: Example
+
+   >>> get_translation_json()
+   {'success': {'total': 1},
+   'contents': {'translated': "Hello qo'!",
+   'text': 'Hello World!',
+   'translation': 'klingon'}}
+
+
+.. py:function:: get_hard2read(in_text='How hard can it be?', lan1='minion', lan2='leetspeak')
+
+   Turn your input into a secret code by translating it twice.
+
+   :param in_text: Set as 'How hard can it be?' by default.
+                   Strongly recommended in_text language: English
+   :type in_text: string
+   :param lan1: Set as 'minion' by default.
+                This is the language your input firstly gets translated into.
+                Use the function get_languages() for more information on available target languages.
+   :type lan1: string
+   :param lan2: Set as 'leetspeak' by default.
+                This is the language your input eventually gets translated into.
+                Strongly recommended lan2: leetspeak, pig-latin, ferb-latin, morse
+   :type lan2: string
+
+   :returns: * *Returns a string as a secret code.*
+             * *Returns False if the input is not correct.*
+             * *Returns nothing if the request fails.*
+
+   .. rubric:: Example
+
+   >>> get_hard2read()
+   '4m3e 0W PUdum p!K 83?'
+
+   >>> get_hard2read(lan1 = "newspeak")
+   False
+
+
+.. py:function:: get_translation(in_text='Some say the world will end in fire,\n    Some say in ice.\n    From what I’ve tasted of desire\n    I hold with those who favor fire.\n    But if it had to perish twice,\n    I think I know enough of hate\n    To say that for destruction ice\n    Is also great\n    And would suffice.', target_languages=['klingon'], by_sentence=False)
+
+   Get some fun translations in a pd dataframe format.
+
+   :param in_texts: Set as a short poem by Robert Frost by default.
+                    Strongly recommended in_text language: English
+   :type in_texts: string
+   :param target_languages: Set as ['klingon'] by default.
+                            Put all fun languages you want the in_text to be translated into!
+                            However, users of public endpoint without an API key have a rate limit. Be careful!
+   :type target_languages: list parameter
+   :param by_sentence: Set as False by default.
+                       Decides whether the output is separated by sentences.
+                       Yoda speak and morse code cannot be seperated by sentence.
+   :type by_sentence: boolean
+
+   :rtype: Returns a dataframe that contains the input text, the translated text, and the corresponding fun language of the translated text.
+
+   .. rubric:: Example
+
+   >>> get_translation(target_languages = ['klingon', 'sith'])
+       Sentence        Translated      Translation
+   0   Some say the world will end in fire, Some say ...       'op jatlh the qo' will van in qul, 'op jatlh ...        klingon
+   1   Some say the world will end in fire, Some say ...       Kair zodis tave visuom valia qorit kash saud, ...       sith
+
+
+.. py:function:: sentence_similarity(sentence1, sentence2)
+
+   Calculate the percentage of similarity between two sentences.
+
+
+
+.. py:function:: similarity_matrix(sentences)
+
+   Generate a matrix for the compare_fun_languages function
+
+
+
+.. py:function:: compare_fun_languages(in_text="Beautiful is better than ugly.\n    Explicit is better than implicit.\n    Simple is better than complex.\n    Complex is better than complicated.\n    Flat is better than nested.\n    Sparse is better than dense.\n    Readability counts.\n    Special cases aren't special enough to break the rules.\n    Although practicality beats purity.\n    Errors should never pass silently.\n    Unless explicitly silenced.\n    In the face of ambiguity, refuse the temptation to guess.\n    There should be one-- and preferably only one --obvious way to do it.\n    Although that way may not be obvious at first unless you're Dutch.\n    Now is better than never.\n    Although never is often better than *right* now.\n    If the implementation is hard to explain, it's a bad idea.\n    If the implementation is easy to explain, it may be a good idea.\n    Namespaces are one honking great idea -- let's do more of those!", target_languages=['sindarin', 'yoda', 'vulcan', 'dothraki', 'groot', 'oldenglish', 'leetspeak'], heatmap=True, mapnote=False)
+
+   Compare some fun translations by looking at their similarity heatmap, their similarity matrix, or simply the translation result gathered in a pd dataframe.
+
+   :param in_text: Set as Zen of Python by default.
+                   Strongly recommended in_text language: English
+   :type in_text: string
+   :param target_languages: Set as ['sindarin', 'yoda', 'vulcan', 'dothraki', 'groot', 'oldenglish', 'leetspeak'] by default.
+                            Put all fun languages you want the in_text to be translated into!
+                            However, users of public endpoint without an API key have a rate limit. Be careful!
+   :type target_languages: list parameter
+   :param heatmap: Set as True by default.
+                   Decides whether show a graph that compares fun languages.
+   :type heatmap: boolean
+   :param mapnote: Set as False by default.
+                   Decides the graph displays the specific numbers of sentence similarity.
+   :type mapnote: boolean
+
+   :returns: * **return[0]** (*a dataframe that contains the input text, the translated text, and the corresponding fun language of the translated text.*)
+             * **return[1]** (*a matrix of sentence similarity*)
+             * *if hearmap == True, there will be a return[2], which is the heatmap graph.*
+
+
