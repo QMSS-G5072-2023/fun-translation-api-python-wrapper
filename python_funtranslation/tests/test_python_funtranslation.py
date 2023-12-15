@@ -1,0 +1,1 @@
+from python_funtranslation import python_funtranslation
