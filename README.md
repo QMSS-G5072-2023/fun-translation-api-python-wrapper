@@ -2,7 +2,7 @@
 # python_funtranslation
 
 A Python wrapper around the Fun Translation API.
-A Python wrapper around the [Fun Translations API](https://funtranslations.com/api/).
+A Python wrapper around the [Fun Translations API](https://funtranslations.com/api/). This is a public API, with a ratelimiting up to 60 API calls a day with distribution of 5 calls an hour.
 
 Use this to translate english into fun languages! 
 What's more: 
