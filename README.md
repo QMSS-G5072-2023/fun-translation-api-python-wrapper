@@ -2,17 +2,20 @@
 # python_funtranslation
 
 A Python wrapper around the Fun Translation API.
+
 A Python wrapper around the [Fun Translations API](https://funtranslations.com/api/). This is a public API, with a ratelimiting up to 60 API calls a day with distribution of 5 calls an hour.
+
+#### Documentation: [readthedocs](https://python-funtranslation.readthedocs.io/)
+
+#### Package: [pypi](https://pypi.org/project/python_funtranslation/)
+
+## Features
 
 Use this package to translate english into fun languages! 
 What's more: 
 - Encrypt your text, like this 'ow-Herb róvan tur- ha n-? ' or this '4m3e 0W PUdum p!K 83?'
 - Get multiple translates from different fun languages
 - Compare fun languages using dataframes and graphs
-
-#### Documentation: [readthedocs](https://python-funtranslation.readthedocs.io/)
-
-#### Package: [pypi](https://pypi.org/project/python_funtranslation/)
 
 
 ## Installation
