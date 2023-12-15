@@ -5,6 +5,9 @@ description = "A Python wrapper around the Fun Translation API."
 authors = ["Yishu Zhang"]
 license = "MIT"
 readme = "README.md"
+ documentation = 'https://python-funtranslation.readthedocs.io/en/latest/index.html#'
+ homepage = "https://github.com/QMSS-G5072-2023/fun-translation-api-python-wrapper"
+ repository = "https://github.com/QMSS-G5072-2023/fun-translation-api-python-wrapper"
 
 [tool.poetry.dependencies]
 python = "^3.9"
