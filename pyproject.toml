@@ -5,11 +5,14 @@ description = "A Python wrapper around the Fun Translation API."
 authors = ["Yishu Zhang"]
 license = "MIT"
 readme = "README.md"
+ documentation = 'https://python-funtranslation.readthedocs.io/en'
+ homepage = 'https://github.com/QMSS-G5072-2023/fun-translation-api-python-wrapper'
+ repository = 'https://github.com/QMSS-G5072-2023/fun-translation-api-python-wrapper'
+
 
 [tool.poetry.dependencies]
 python = "^3.9"
 requests = "^2.31.0"
-pandas = "^1.4.2"
 lxml = "^4.9.0"
 urllib3 =  "^2.1.0"
 seaborn = "^0.13.0"
@@ -27,3 +30,5 @@ pytest = "^7.4.3"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+ 
